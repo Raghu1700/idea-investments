@@ -4,9 +4,6 @@ import { Hero } from '../components/sections/Hero';
 import { About } from '../components/sections/About';
 import { Services } from '../components/sections/Services';
 import { TopFunds } from '../components/sections/TopFunds';
-import { Calculator } from '../components/sections/Calculator';
-import { Process } from '../components/sections/Process';
-import { Contact } from '../components/sections/Contact';
 
 export const Home = () => {
   useEffect(() => {
@@ -32,9 +29,6 @@ export const Home = () => {
       <About />
       <Services />
       <TopFunds />
-      <Calculator />
-      <Process />
-      <Contact />
     </main>
   );
 };

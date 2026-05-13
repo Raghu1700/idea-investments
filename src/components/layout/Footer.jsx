@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Globe, MessageCircle, Share2, Video, Mail, Phone, MapPin } from 'lucide-react';
 import { AnimatedButton } from '../ui/AnimatedButton';
 
@@ -32,11 +33,11 @@ export const Footer = () => {
           <div className="flex flex-col gap-6">
             <h4 className="text-lg font-semibold text-slate-800">Quick Links</h4>
             <ul className="flex flex-col gap-3">
-              {['Home', 'About Advisor', 'Services & Plans', 'Financial Calculator', 'Client Testimonials'].map((link, i) => (
-                <li key={i}>
-                  <a href="#" className="text-slate-500 hover:text-coral transition-colors">{link}</a>
-                </li>
-              ))}
+              <li><Link to="/" className="text-slate-500 hover:text-coral transition-colors">Home</Link></li>
+              <li><Link to="/plans" className="text-slate-500 hover:text-coral transition-colors">Services & Plans</Link></li>
+              <li><Link to="/calculator" className="text-slate-500 hover:text-coral transition-colors">Financial Calculator</Link></li>
+              <li><Link to="/history" className="text-slate-500 hover:text-coral transition-colors">Firm History & Records</Link></li>
+              <li><Link to="/contact" className="text-slate-500 hover:text-coral transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -59,21 +60,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div className="flex flex-col gap-6">
-            <h4 className="text-lg font-semibold text-slate-800">Newsletter</h4>
-            <p className="text-slate-500">Subscribe for premium financial insights and market updates.</p>
-            <form className="flex flex-col gap-3">
-              <input 
-                type="email" 
-                placeholder="Email address" 
-                className="px-4 py-3 rounded-xl border border-slate-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-coral/50 transition-all"
-              />
-              <AnimatedButton variant="primary" className="w-full">
-                Subscribe
-              </AnimatedButton>
-            </form>
-          </div>
         </div>
 
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-sm">

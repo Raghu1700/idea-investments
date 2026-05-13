@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ShieldCheck, TrendingUp, Users } from 'lucide-react';
 import { AnimatedButton } from '../ui/AnimatedButton';
@@ -50,12 +51,16 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 hero-element">
-              <AnimatedButton variant="primary" className="text-base md:text-lg px-6 py-3 md:px-8 md:py-4 w-full sm:w-auto">
-                Start Planning
-              </AnimatedButton>
-              <AnimatedButton variant="secondary" className="text-base md:text-lg px-6 py-3 md:px-8 md:py-4 w-full sm:w-auto">
-                Calculate Returns
-              </AnimatedButton>
+              <Link to="/plans" className="w-full sm:w-auto">
+                <AnimatedButton variant="primary" className="text-base md:text-lg px-6 py-3 md:px-8 md:py-4 w-full">
+                  Start Planning
+                </AnimatedButton>
+              </Link>
+              <Link to="/calculator" className="w-full sm:w-auto">
+                <AnimatedButton variant="secondary" className="text-base md:text-lg px-6 py-3 md:px-8 md:py-4 w-full">
+                  Calculate Returns
+                </AnimatedButton>
+              </Link>
             </div>
           </div>
 

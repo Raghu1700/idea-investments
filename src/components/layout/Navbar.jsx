@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Menu, X, ShieldCheck } from 'lucide-react';
 import { AnimatedButton } from '../ui/AnimatedButton';
 
@@ -16,11 +17,11 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Calculator', href: '#calculator' },
-    { name: 'Process', href: '#process' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/plans' },
+    { name: 'Calculator', href: '/calculator' },
+    { name: 'History', href: '/history' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -37,34 +38,36 @@ export const Navbar = () => {
           scrolled ? 'shadow-xl bg-white/70' : 'bg-white/40'
         }`}>
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer">
+          <Link to="/" className="flex items-center gap-2 cursor-pointer">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-coral to-blush flex items-center justify-center text-white shadow-lg">
               <ShieldCheck size={24} />
             </div>
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600">
               LIC Premier
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-sm font-medium text-slate-600 hover:text-coral transition-colors relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coral transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* CTA */}
           <div className="hidden md:block">
-            <AnimatedButton variant="primary" className="py-2 px-6 text-sm">
-              Book Consultation
-            </AnimatedButton>
+            <Link to="/calendar">
+              <AnimatedButton variant="primary" className="py-2 px-6 text-sm">
+                Book Consultation
+              </AnimatedButton>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -87,18 +90,20 @@ export const Navbar = () => {
             className="absolute top-full left-6 right-6 mt-4 p-6 glass rounded-2xl md:hidden flex flex-col gap-4"
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-lg font-medium text-slate-800 hover:text-coral transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <AnimatedButton variant="primary" className="w-full mt-4">
-              Book Consultation
-            </AnimatedButton>
+            <Link to="/calendar" onClick={() => setMobileMenuOpen(false)}>
+              <AnimatedButton variant="primary" className="w-full mt-4">
+                Book Consultation
+              </AnimatedButton>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
