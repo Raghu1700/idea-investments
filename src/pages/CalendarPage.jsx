@@ -13,8 +13,8 @@ export const CalendarPage = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Mock available dates
-  const dates = Array.from({ length: 7 }, (_, i) => {
+  // Generate 60 days of dates (roughly current and next month)
+  const dates = Array.from({ length: 60 }, (_, i) => {
     const d = new Date();
     d.setDate(d.getDate() + i + 1);
     return {
