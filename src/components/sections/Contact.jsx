@@ -82,10 +82,10 @@ export const Contact = () => {
               </div>
               <div>
                 <h4 className="text-xl font-bold text-slate-800 mb-2">Direct Contact</h4>
-                <p className="text-slate-500 leading-relaxed">
-                  +91 98765 43210<br />
-                  Mon-Fri, 9am - 6pm
-                </p>
+                <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-coral transition-colors leading-relaxed block">
+                  +91 98765 43210
+                </a>
+                <p className="text-sm text-slate-400 mt-1">Mon-Fri, 9am - 6pm</p>
               </div>
             </motion.div>
 
@@ -101,10 +101,9 @@ export const Contact = () => {
               </div>
               <div>
                 <h4 className="text-xl font-bold text-slate-800 mb-2">Email</h4>
-                <p className="text-slate-500 leading-relaxed">
-                  advisor@licpremier.com<br />
-                  support@licpremier.com
-                </p>
+                <a href="mailto:advisor@licpremier.com" className="text-slate-500 hover:text-coral transition-colors leading-relaxed block">
+                  advisor@licpremier.com
+                </a>
               </div>
             </motion.div>
           </div>

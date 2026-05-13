@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Heart, Shield, Landmark, Baby, Briefcase, GraduationCap, TrendingUp, Umbrella } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 
@@ -18,12 +19,12 @@ export const Services = () => {
   return (
     <section className="py-24 relative z-10 bg-slate-50/50" id="services">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
+        <div className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-slate-800 mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6"
           >
             Premium <span className="text-gradient">Financial Solutions</span>
           </motion.h2>
@@ -32,7 +33,7 @@ export const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-slate-500 text-lg"
+            className="text-base md:text-lg text-slate-500"
           >
             Tailored investment and protection plans designed to build generational wealth and secure your family's legacy.
           </motion.p>
@@ -46,9 +47,9 @@ export const Services = () => {
               </div>
               <h3 className="text-xl font-bold text-slate-800 mb-3">{svc.title}</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-6">{svc.desc}</p>
-              <div className="inline-flex items-center text-coral font-medium text-sm group-hover:underline">
+              <Link to="/plan-details" className="inline-flex items-center text-coral font-medium text-sm group-hover:underline">
                 Explore Plan &rarr;
-              </div>
+              </Link>
             </GlassCard>
           ))}
         </div>

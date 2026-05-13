@@ -40,20 +40,20 @@ export const Hero = () => {
               <span className="text-sm font-medium text-slate-700">Premium LIC Advisory</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-slate-800 hero-element">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight text-slate-800 hero-element">
               Secure Your Family's <br />
               <span className="text-gradient">Legacy Today</span>
             </h1>
             
-            <p className="text-lg text-slate-500 max-w-xl leading-relaxed hero-element">
+            <p className="text-base md:text-lg text-slate-500 max-w-xl leading-relaxed hero-element">
               Experience world-class financial planning. We craft personalized insurance and wealth strategies to protect what matters most to you.
             </p>
             
-            <div className="flex flex-wrap gap-4 hero-element">
-              <AnimatedButton variant="primary" className="text-lg px-8 py-4">
+            <div className="flex flex-col sm:flex-row gap-4 hero-element">
+              <AnimatedButton variant="primary" className="text-base md:text-lg px-6 py-3 md:px-8 md:py-4 w-full sm:w-auto">
                 Start Planning
               </AnimatedButton>
-              <AnimatedButton variant="secondary" className="text-lg px-8 py-4">
+              <AnimatedButton variant="secondary" className="text-base md:text-lg px-6 py-3 md:px-8 md:py-4 w-full sm:w-auto">
                 Calculate Returns
               </AnimatedButton>
             </div>

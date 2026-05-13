@@ -50,11 +50,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-slate-500">
                 <Phone className="text-coral shrink-0" size={18} />
-                <span>+91 98765 43210</span>
+                <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="hover:text-coral transition-colors">+91 98765 43210</a>
               </li>
               <li className="flex items-center gap-3 text-slate-500">
                 <Mail className="text-coral shrink-0" size={18} />
-                <span>advisor@licpremier.com</span>
+                <a href="mailto:advisor@licpremier.com" className="hover:text-coral transition-colors">advisor@licpremier.com</a>
               </li>
             </ul>
           </div>

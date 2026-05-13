@@ -14,11 +14,11 @@ export const Process = () => {
   return (
     <section className="py-24 relative bg-ivory" id="process">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20 max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">
+        <div className="text-center mb-12 md:mb-20 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-4 md:mb-6">
             The <span className="text-gradient">Premium Journey</span>
           </h2>
-          <p className="text-slate-500 text-lg">
+          <p className="text-base md:text-lg text-slate-500">
             A seamless, transparent, and highly personalized experience tailored for your peace of mind.
           </p>
         </div>

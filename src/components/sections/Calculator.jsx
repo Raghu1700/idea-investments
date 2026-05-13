@@ -21,9 +21,9 @@ export const Calculator = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-aqua font-semibold tracking-wider uppercase text-sm">Wealth Planner</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3">
+        <div className="text-center mb-10 md:mb-16">
+          <span className="text-aqua font-semibold tracking-wider uppercase text-xs md:text-sm">Wealth Planner</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 md:mt-3">
             Estimate Your <span className="text-coral">Future Growth</span>
           </h2>
         </div>
@@ -78,14 +78,14 @@ export const Calculator = () => {
             <GlassCard className="glass-dark !border-slate-700 h-full flex flex-col justify-center">
               <h3 className="text-xl text-slate-300 font-medium mb-8">Estimated Projection</h3>
               
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="p-6 rounded-2xl bg-slate-800/50 border border-slate-700">
-                  <p className="text-slate-400 text-sm mb-2">Total Investment</p>
-                  <p className="text-3xl font-bold text-white">₹{totalInvestment.toLocaleString()}</p>
+              <div className="grid md:grid-cols-2 gap-4 md:gap-8 mb-8">
+                <div className="p-4 md:p-6 rounded-2xl bg-slate-800/50 border border-slate-700">
+                  <p className="text-slate-400 text-xs md:text-sm mb-1 md:mb-2">Total Investment</p>
+                  <p className="text-2xl lg:text-3xl font-bold text-white">₹{totalInvestment.toLocaleString()}</p>
                 </div>
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-coral/20 to-transparent border border-coral/30">
-                  <p className="text-coral text-sm mb-2">Estimated Maturity Amount</p>
-                  <p className="text-4xl font-bold text-white">₹{estimatedReturn.toLocaleString()}</p>
+                <div className="p-4 md:p-6 rounded-2xl bg-gradient-to-br from-coral/20 to-transparent border border-coral/30">
+                  <p className="text-coral text-xs md:text-sm mb-1 md:mb-2">Estimated Maturity Amount</p>
+                  <p className="text-3xl lg:text-4xl font-bold text-white">₹{estimatedReturn.toLocaleString()}</p>
                 </div>
               </div>
 

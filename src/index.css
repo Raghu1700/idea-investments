@@ -22,6 +22,14 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-coral to-blush;
   }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 /* Lenis recommended CSS */
