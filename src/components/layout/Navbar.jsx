@@ -20,7 +20,7 @@ export const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/plans' },
     { name: 'Calculator', href: '/calculator' },
-    { name: 'History', href: '/history' },
+    { name: 'History', href: '#history' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -50,14 +50,25 @@ export const Navbar = () => {
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-sm font-medium text-slate-600 hover:text-coral transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coral transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-medium text-slate-600 hover:text-coral transition-colors relative group"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coral transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-sm font-medium text-slate-600 hover:text-coral transition-colors relative group"
+                >
+                  {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-coral transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              )
             ))}
           </div>
 
@@ -90,14 +101,25 @@ export const Navbar = () => {
             className="absolute top-full left-6 right-6 mt-4 p-6 glass rounded-2xl md:hidden flex flex-col gap-4"
           >
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-lg font-medium text-slate-800 hover:text-coral transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-lg font-medium text-slate-800 hover:text-coral transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-lg font-medium text-slate-800 hover:text-coral transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
             <Link to="/calendar" onClick={() => setMobileMenuOpen(false)}>
               <AnimatedButton variant="primary" className="w-full mt-4">

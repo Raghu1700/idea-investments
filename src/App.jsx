@@ -4,10 +4,10 @@ import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { PlanDetails } from './pages/PlanDetails';
-import { HistoryPage } from './pages/HistoryPage';
 import { CalendarPage } from './pages/CalendarPage';
 import { CalculatorPage } from './pages/CalculatorPage';
 import { ContactPage } from './pages/ContactPage';
+import { HistorySection } from './components/sections/HistorySection';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -26,13 +26,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/plans" element={<PlanDetails />} />
-          <Route path="/history" element={<HistoryPage />} />
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/calculator" element={<CalculatorPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          {/* Legacy route fallback */}
           <Route path="/plan-details" element={<PlanDetails />} />
         </Routes>
+        <HistorySection />
         <Footer />
       </div>
     </Router>
